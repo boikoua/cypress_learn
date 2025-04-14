@@ -32,17 +32,17 @@ describe('My home page', () => {
     cy.url().should('include', '/login');
 
     // Проверяем, есть ли на сайте нужный элемент с текстом
-    cy.get('h1').should('contain.text', 'Sign In');
+    cy.get('h1').should('contain.text', 'Sign in');
   });
 
   it('should click on Sign Up', () => {
-    // Ищем элемент с текстом Sign in и нажимаем на него
+    // Ищем элемент с текстом Sign up и нажимаем на него
     cy.contains('a', 'Sign up').should('exist').click();
 
     // Проверяем поменялся ли адрес сайта
     cy.url().should('include', '/register');
 
     // Проверяем, есть ли на сайте нужный элемент с текстом
-    cy.get('h1').should('contain.text', 'Sign Up');
+    cy.get('h1').should('contain.text', 'Sign up');
   });
 });

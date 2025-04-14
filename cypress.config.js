@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://react-redux.realworld.io/',
+    baseUrl: 'http://localhost:1667/#',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
