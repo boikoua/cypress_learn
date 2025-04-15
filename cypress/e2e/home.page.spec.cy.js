@@ -10,7 +10,7 @@ describe('My home page', () => {
     });
 
     // переходим на главную страницу сайта перед каждым новым тестом
-    cy.visit('/');
+    cy.visit('#/');
   });
 
   it('should have all parts', () => {

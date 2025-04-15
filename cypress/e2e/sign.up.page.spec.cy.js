@@ -5,7 +5,7 @@ const generateUser = require('./../support/generateUser');
 // тесты для тестирования регистрации
 describe('Sign Up page', () => {
   beforeEach(() => {
-    cy.visit('/register');
+    cy.visit('#/register');
   });
 
   it('should register user', () => {
@@ -15,9 +15,9 @@ describe('Sign Up page', () => {
     const { username, email, password } = generateUser();
 
     // Вводим текст с помощью метода type проверяем ввод имени
-    cy.get('input[placeholder=Username]').type(username);
-    cy.get('input[placeholder=Email]').type(email);
-    cy.get('input[placeholder=Password]').type(password);
+    cy.get('[placeholder=Username]').type(username);
+    cy.get('[placeholder=Email]').type(email);
+    cy.get('[placeholder=Password]').type(password);
 
     // Клик на кнопку
     cy.get('.btn').click();
@@ -36,9 +36,9 @@ describe('Sign Up page', () => {
     const { username, email, password } = generateUser();
 
     // Вводим текст с помощью метода type проверяем ввод имени
-    cy.get('input[placeholder=Username]').type(username + '_new');
-    cy.get('input[placeholder=Email]').type(email);
-    cy.get('input[placeholder=Password]').type(password);
+    cy.findByPlaceholder('Username').type(username + '_new');
+    cy.findByPlaceholder('Email').type(email);
+    cy.findByPlaceholder('Password').type(password);
 
     // Клик на кнопку
     cy.get('.btn').click();
